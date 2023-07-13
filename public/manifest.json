@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "WhatIsPoint.xyz",
+    "short_name": "whatispoint",
+    "version": "0.1.2",
+    "description": "Get the main insight from an article using GPT",
+    "icons": {
+      "16": "vercel.svg",
+      "32": "vercel.svg",
+      "48": "vercel.svg",
+      "128": "vercel.svg",
+      "192": "vercel.svg"
+    },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+      {
+        "matches": ["https://*/*", "http://*/*"],
+        "js": ["inject.js"],
+        "css": ["globals.css"]
+      }
+      
+    ],
+    "action": {
+      "default_popup": "index.html"
+    }
+  }
+  
